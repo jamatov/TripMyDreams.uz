@@ -22,7 +22,9 @@ export default function Navbar() {
           <Link to="/"><img src={Logo} alt="" /></Link>
 
           <ul className='nav-list'>
-            <li className='nav-item'><Link to="/">{getText('home')}</Link></li>
+            <li className='nav-item'>
+              <Link to="/">{getText('home')}</Link>
+            </li>
             <li className='nav-item nav-dropdown'>
               <Link to='/tours'>{getText('tours')}</Link>
 
@@ -48,26 +50,31 @@ export default function Navbar() {
                 <Link to='/afrika'>Afrika</Link>
                 <Link to='/turkey'>Turkiya</Link>
                 <Link to='/yevropaga-sayohatlar'>Yevropaga turlar</Link>
-
-
-
-
               </div>
+
             </li>
-            <li className='nav-item'><Link to='/services'>{getText('services')}</Link></li>
-            <li className='nav-item'><Link to='/blogs'>{getText('blogs')}</Link></li>
-            <li className='nav-item'><Link to='/about'>{getText('about')}</Link></li>
-            <li className='nav-item'><Link to='/contact'>{getText('contact')}</Link></li>
+
+            <li className='nav-item'>
+              <Link to='/services'>{getText('services')}</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/blogs'>{getText('blogs')}</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/about'>{getText('about')}</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/contact'>{getText('contact')}</Link>
+            </li>
             <li className='nav-item langWrap'>
               <h5>
                 {getLanguage() === 'en' ? <><i><img src="/en.svg" alt="" /></i> English</> : getLanguage() === 'uz' ? <><i><img src="/uz.svg" alt="" /></i> O'zbek</> : <><i><img src="/ru.svg" alt="" /></i> Русский</>}
               </h5>
-              <div className="wrap">
 
+              <div className="wrap">
                 <p onClick={() => changeLanguage('uz')}><i><img src="/uz.svg" alt="" /></i> O'zbek</p>
                 <p onClick={() => changeLanguage('ru')}><i><img src="/ru.svg" alt="" /></i> Русский</p>
                 <p onClick={() => changeLanguage('en')}><i><img src="/en.svg" alt="" /></i> English</p>
-
               </div>
             </li>
           </ul>
